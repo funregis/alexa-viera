@@ -7,7 +7,7 @@ const skillName = 'TV Panasonic Remote';
 const COMMANDS = {
   group:{
     command: 'X_SendKey',
-    url : '/nrc/control_0',
+    path : '/nrc/control_0',
     urn: 'panasonic-com:service:p00NetworkControl:1'
   },
   power : '<X_KeyEvent>NRC_POWER-ONOFF</X_KeyEvent>',
@@ -25,7 +25,7 @@ const COMMANDS = {
 const RENDERS = {
   group:{
     command : 'SetVolume',
-    url: '/nrc/control_0',
+    path: '/nrc/control_0',
     urn: 'schemas-upnp-org:service:RenderingControl:1'
   },
 
@@ -45,7 +45,7 @@ const SOAP_ACTION = '"urn:@urn@#@command@"';
 
 const makeRequest = (group, action, context) => {
   request.post({
-    uri: `${serverAddress}${group.url}`,
+    uri: `${serverAddress}${group.path}`,
     headers: {'Content-Type': 'text/xml; charset="utf-8', 'SOAPACTION': SOAP_ACTION.replace('@urn@',group.urn).replace('@command@',group.command)},
     body: SOAP_TEMPLATES.replace('@command@',group.command).replace('@action@',action)
   }, (err, res, body) => {
