@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shaundon/alexa-viera.git"
+    "url": "git+https://github.com/funregis/alexa-viera.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shaundon/alexa-viera/issues"
+    "url": "https://github.com/funregis/alexa-viera.git/issues"
   },
-  "homepage": "https://github.com/shaundon/alexa-viera#readme",
+  "homepage": "https://github.com/funregis/alexa-viera.git#readme",
   "dependencies": {
     "alexa-sdk": "^1.0.9",
     "request": "^2.81.0"
